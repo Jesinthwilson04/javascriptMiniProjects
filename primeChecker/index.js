@@ -1,16 +1,20 @@
 const number=document.getElementById("number");
 const checkbtn=document.getElementById("checkPrime");
 const display=document.getElementById("display")
+console.log(number,checkbtn,display);
 
 checkbtn.addEventListener("click",function(){
   let value=Number(number.value);
-  for( i=2;i<=Math.sqrt(value);i++)
+  for(let i=2;i<=Math.sqrt(value);i++)
     if(value%i==0)
       {
-        display.innerText="Not a Prime"
-}
+        console.log("Not a Prime");
+        display.innerText="Not a Prime";
+        break;
+      }     
   else{
-    display.innerText="Prime"
+    console.log("Prime");
+    display.innerText="Prime";
   }
 
 })
